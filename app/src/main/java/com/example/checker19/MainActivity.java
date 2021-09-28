@@ -17,7 +17,7 @@ import com.google.firebase.messaging.FirebaseMessaging;
 public class MainActivity extends AppCompatActivity {
 
     private ImageView img1,img2,img3;
-    private CardView testLayout,vaccineLayout;
+    private CardView testLayout,vaccineLayout,hotpotsLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         img3 = findViewById(R.id.img3);
         testLayout = findViewById(R.id.testLayout);
         vaccineLayout = findViewById(R.id.vaccineLayout);
+        hotpotsLayout = findViewById(R.id.hotpotsLayout);
 
         FirebaseMessaging.getInstance().subscribeToTopic("android").addOnSuccessListener(unused -> {
 
@@ -40,6 +41,10 @@ public class MainActivity extends AppCompatActivity {
 
         vaccineLayout.setOnClickListener(view -> {
             Intent intent = new Intent(this,VaccineActivity.class);
+            startActivity(intent);
+        });
+        hotpotsLayout.setOnClickListener(view -> {
+            Intent intent = new Intent(this,HotspotsActivity.class);
             startActivity(intent);
         });
 
