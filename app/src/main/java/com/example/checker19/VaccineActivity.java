@@ -9,25 +9,27 @@ import com.bumptech.glide.Glide;
 
 import java.util.Objects;
 
-public class TestActivity extends AppCompatActivity {
+public class VaccineActivity extends AppCompatActivity {
+
     private ImageView img1,img2,img3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_test);
-        Objects.requireNonNull(getSupportActionBar()).setTitle("Covid Test Sites");
+        setContentView(R.layout.activity_vaccine);
 
         img1 = findViewById(R.id.img1);
         img2 = findViewById(R.id.img2);
         img3 = findViewById(R.id.img3);
 
+        Objects.requireNonNull(getSupportActionBar()).setTitle("Covid Vaccination Sites");
+
         Glide.with(this)
-                .load("https://media.istockphoto.com/vectors/people-waiting-in-line-queued-up-for-vaccination-at-coronavirus-or-vector-id1317214792?k=20&m=1317214792&s=612x612&w=0&h=reoy8qGl03vB0jUaNdl_JfcCMNk4QFusmmvJ3KvOsGc=")
+                .load("https://img.freepik.com/free-vector/people-waiting-line-vaccinations-doctor-holding-syringe-with-vaccine-against-covid-flat-vector-illustration-hospital-coronavirus-concept-banner-website-design-landing-web-page_179970-5309.jpg?size=626&ext=jpg")
                 .into(img1);
 
         Glide.with(this)
-                .load("https://st2.depositphotos.com/48656914/45640/v/950/depositphotos_456406400-stock-illustration-drive-thru-covid-swab-test.jpg")
+                .load("https://static.vecteezy.com/system/resources/previews/002/166/537/original/young-couple-do-covid-19-drive-thru-vaccination-free-vector.jpg")
                 .into(img2);
 
         Glide.with(this)

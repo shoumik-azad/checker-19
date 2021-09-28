@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Checker19">
         <activity
+            android:name=".VaccineActivity"
+            android:exported="true" />
+        <activity
             android:name=".TestActivity"
             android:exported="true" />
         <activity
@@ -23,6 +26,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="YOUR_CHANNEL_ID" />
+
+        <service
+            android:name=".fcm.MyFirebaseMessagingService"
+            android:stopWithTask="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
     </application>
 
 </manifest>
