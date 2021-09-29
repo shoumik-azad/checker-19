@@ -9,12 +9,13 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
+import com.example.checker19.helper.AppConstant;
 
 import java.util.Objects;
 
 public class TestActivity extends AppCompatActivity {
     private ImageView img1,img2,img3;
-    private CardView walkInLayout;
+    private CardView walkInLayout,driveThru,clinicLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,8 @@ public class TestActivity extends AppCompatActivity {
         img2 = findViewById(R.id.img2);
         img3 = findViewById(R.id.img3);
         walkInLayout = findViewById(R.id.walkInLayout);
+        driveThru = findViewById(R.id.driveThru);
+        clinicLayout = findViewById(R.id.clinicLayout);
 
         Glide.with(this)
                 .load("https://media.istockphoto.com/vectors/people-waiting-in-line-queued-up-for-vaccination-at-coronavirus-or-vector-id1317214792?k=20&m=1317214792&s=612x612&w=0&h=reoy8qGl03vB0jUaNdl_JfcCMNk4QFusmmvJ3KvOsGc=")
@@ -41,6 +44,19 @@ public class TestActivity extends AppCompatActivity {
 
         walkInLayout.setOnClickListener(view -> {
             Intent intent = new Intent(this,NearbyActivity.class);
+            intent.putExtra("title", AppConstant.TEST_WALK_IN);
+            startActivity(intent);
+        });
+
+        driveThru.setOnClickListener(view -> {
+            Intent intent = new Intent(this,NearbyActivity.class);
+            intent.putExtra("title", AppConstant.TEST_DRIVE_THRU);
+            startActivity(intent);
+        });
+
+        clinicLayout.setOnClickListener(view -> {
+            Intent intent = new Intent(this,NearbyActivity.class);
+            intent.putExtra("title", AppConstant.TEST_CLINIC);
             startActivity(intent);
         });
     }
