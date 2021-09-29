@@ -11,7 +11,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClint {
-    private static final String BASE_URL = "https://istlem.com/api/v1/";
+    private static final String BASE_URL = "https://maps.googleapis.com/maps/api/";
 
     private static OkHttpClient provideClient() {
 
