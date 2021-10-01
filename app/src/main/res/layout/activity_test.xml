@@ -85,7 +85,7 @@
                 android:id="@+id/text2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Drive Thru"
+                android:text="Drive Through"
                 android:textAllCaps="true"
                 android:textSize="20sp"
                 android:textStyle="bold"
