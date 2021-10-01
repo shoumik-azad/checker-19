@@ -27,7 +27,7 @@ public class HotspotsActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView);
         hotspotsAdapter = new HotspotsAdapter(this,arrayList);
         recyclerView.setAdapter(hotspotsAdapter);
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        FirebaseDatabase database = FirebaseDatabase.getInstance(); //Use of firebase realtime database
         DatabaseReference myRef = database.getReference("area");
 
         myRef.addValueEventListener(new ValueEventListener() {

@@ -29,7 +29,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
-        super.onMessageReceived(remoteMessage);
+        super.onMessageReceived(remoteMessage); //Use of firebase push notification
         if (remoteMessage.getData() != null) {
             sendNotification(remoteMessage.getData().get("title") != null ? remoteMessage.getData().get("title") : "",
                     remoteMessage.getData().get("body") != null ? remoteMessage.getData().get("body") : "");
