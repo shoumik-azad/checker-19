@@ -93,7 +93,7 @@ public class NearbyActivity extends AppCompatActivity implements Callback<Google
                         qwe.put("location", "" + location.getLatitude() + "," + location.getLongitude());
                         qwe.put("radius", "15000");
                         qwe.put("keyword", title);
-                        qwe.put("key", "AIzaSyDZRIi4wc1ADgG_WCV7vZfqlN3bVCsUfWM");
+                        qwe.put("key", "AIzaSyDZRIi4wc1ADgG_WCV7vZfqlN3bVCsUfWM"); //Google API key
                         apiService.getGoogleResponse(qwe).enqueue(this);
                     }
                 });
@@ -132,7 +132,7 @@ public class NearbyActivity extends AppCompatActivity implements Callback<Google
         if (location != null) {
             Intent intent = new Intent(android.content.Intent.ACTION_VIEW,
                     Uri.parse("http://maps.google.com/maps?saddr=" + location.getLatitude() + "," + location.getLongitude() + "&daddr=" + item.getGeometry().getLocation().getLat() + "," + item.getGeometry().getLocation().getLng() + ""));
-            startActivity(intent);
+            startActivity(intent); //Redirecting to google maps
         }
     }
 }

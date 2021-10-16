@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         testLayout.setOnClickListener(view -> {
+            //throw new RuntimeException(); //To crash the app, keep this line and remove the next two
             Intent intent = new Intent(this,TestActivity.class);
             startActivity(intent);
         });
